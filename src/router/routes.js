@@ -17,6 +17,11 @@ export const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('src/pages/auth/auth-register-page.vue'),
+    component: () => import('src/pages/auth/auth-login-page.vue'),
+    meta: {
+      layout: 'LayoutAuth',
+      title: 'auth.login.title',
+      requireGuest: true,
+    },
   },
 ];
