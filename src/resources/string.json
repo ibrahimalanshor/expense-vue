@@ -1,0 +1,70 @@
+{
+    "error": {
+        "client": "Something Error"
+    },
+    "navbar": {
+        "menus": {
+            "home": "Home"
+        },
+        "profile-dropdown-items": {
+            "profile": "Profile",
+            "logout": "Sign Out"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Sign in to your account",
+            "attributes": {
+                "email": "Email",
+                "password": "Password"
+            },
+            "actions": {
+                "login": "Sign in"
+            },
+            "links": {
+                "forgot-password": "Forgot Password",
+                "register": "Create your account"
+            },
+            "messages": {
+                "not-have-account": "Not a member?"
+            }
+        },
+        "register": {
+            "title": "Create Your Account",
+            "attributes": {
+                "email": "Email",
+                "name": "Name",
+                "password": "Password",
+                "password_confirmation": "Password Confirmation"
+            },
+            "actions": {
+                "register": "Sign Up"
+            },
+            "links": {
+                "login": "Sign in to your account"
+            },
+            "messages": {
+                "already-have-account": "Already have an account?"
+            }
+        }
+    },
+    "app": {
+        "home": {
+            "title": "Home"
+        },
+        "task": {
+            "placeholder": {
+                "default-category-filter": "All Todos",
+                "empty": "Empty Todos",
+                "no-due": "No Due",
+                "no-category": "No Category",
+                "due": "Due on {due}",
+                "category": "In {category}"
+            },
+            "actions": {
+                "mark-as-done": "Mark As Done"
+            },
+            "title": "Todos"
+        }
+    }
+}
