@@ -21,7 +21,7 @@ http.interceptors.response.use(
   (error) => {
     const authStore = useAuthStore();
 
-    if (error.response.status === 401) {
+    if (authStore.isLoggedIn && error.response.status === 401) {
       authStore.logout();
 
       router.push({ name: 'login' });
