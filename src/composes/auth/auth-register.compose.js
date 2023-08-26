@@ -13,7 +13,7 @@ export function useRegister() {
     const [success, error] = await request(payload);
 
     if (success) {
-      authStore.login({ accessToken: success.data.accessToken });
+      authStore.login({ accessToken: success.accessToken });
     }
 
     return [success, error];

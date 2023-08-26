@@ -11,6 +11,7 @@ export const routes = [
     meta: {
       layout: 'LayoutAuth',
       title: 'auth.register.title',
+      requireGuest: true,
     },
   },
   {
