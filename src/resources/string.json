@@ -2,6 +2,10 @@
     "error": {
         "client": "Something Error"
     },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel"
+    },
     "navbar": {
         "menus": {
             "home": "Home",
@@ -55,12 +59,8 @@
         },
         "accounts": {
             "placeholder": {
-                "default-category-filter": "All Todos",
-                "empty": "Empty Todos",
-                "no-due": "No Due",
-                "no-category": "No Category",
-                "due": "Due on {due}",
-                "category": "In {category}"
+                "name": "Name",
+                "initial-balance": "Initial Balance"
             },
             "actions": {
                 "create": "Add Account"
