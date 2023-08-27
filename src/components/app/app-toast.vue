@@ -13,7 +13,7 @@ function handleClose(index) {
 
 <template>
   <div
-    class="fixed top-6 left-1/2 -translate-x-1/2 w-fit min-w-[300px] space-y-4"
+    class="fixed z-20 top-6 left-1/2 -translate-x-1/2 w-fit min-w-[300px] space-y-4"
   >
     <base-toast
       v-for="(toast, index) in toasts"

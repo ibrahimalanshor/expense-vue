@@ -2,9 +2,14 @@
     "error": {
         "client": "Something Error"
     },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel"
+    },
     "navbar": {
         "menus": {
-            "home": "Home"
+            "home": "Home",
+            "accounts": "Accounts"
         },
         "profile-dropdown-items": {
             "profile": "Profile",
@@ -52,19 +57,18 @@
         "home": {
             "title": "Home"
         },
-        "task": {
+        "account": {
             "placeholder": {
-                "default-category-filter": "All Todos",
-                "empty": "Empty Todos",
-                "no-due": "No Due",
-                "no-category": "No Category",
-                "due": "Due on {due}",
-                "category": "In {category}"
+                "name": "Name",
+                "initial-balance": "Initial Balance"
             },
             "actions": {
-                "mark-as-done": "Mark As Done"
+                "create": "Add Account"
             },
-            "title": "Todos"
+            "messages": {
+                "created": "Account created"
+            },
+            "title": "Accounts"
         }
     }
 }

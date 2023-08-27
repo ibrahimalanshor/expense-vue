@@ -18,6 +18,10 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  leading: {
+    type: String,
+    default: 'leading-9',
+  },
   classes: {
     type: Object,
     default: () => ({
@@ -46,7 +50,7 @@ const style = computed(() => {
       fontWeights[props.weigth],
       props.tight ? 'tracking-tight' : '',
       'text-gray-900',
-      'leading-9',
+      props.leading,
       props.classes.heading,
     ],
   };
