@@ -14,7 +14,7 @@ router.afterEach(() => {
 </script>
 
 <template>
-  <component :is="route.meta.layout">
+  <component :is="route.meta.layout ?? 'div'">
     <app-progress-bar />
     <app-toast />
     <router-view />

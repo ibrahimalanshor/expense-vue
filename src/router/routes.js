@@ -3,6 +3,11 @@ export const routes = [
     path: '/',
     name: 'home',
     component: () => import('src/pages/index-page.vue'),
+    meta: {
+      layout: 'LayoutApp',
+      title: 'app.home.title',
+      requireAuth: true,
+    },
   },
   {
     path: '/register',
