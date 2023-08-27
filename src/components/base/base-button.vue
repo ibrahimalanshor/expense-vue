@@ -24,6 +24,7 @@ const props = defineProps({
     default: false,
   },
 });
+const emit = defineEmits(['click']);
 
 const style = computed(() => {
   const sizes = {
@@ -47,6 +48,10 @@ const style = computed(() => {
     ],
   };
 });
+
+function handleClick() {
+  emit('click');
+}
 </script>
 
 <template>
@@ -57,6 +62,7 @@ const style = computed(() => {
       style.button,
     ]"
     :disabled="props.loading"
+    v-on:click="handleClick"
   >
     <base-spinner v-if="props.loading" size="sm" />
     <slot />

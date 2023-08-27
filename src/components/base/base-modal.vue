@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import BaseCard from './base-card.vue';
 import BaseIconButton from './base-icon-button.vue';
 import { XMarkIcon } from '@heroicons/vue/24/outline';
@@ -16,11 +17,30 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
 });
+const emit = defineEmits(['update:modelValue']);
+
+const visible = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(value) {
+    emit('update:modelValue', value);
+  },
+});
+
+function handleClose() {
+  visible.value = false;
+}
 </script>
 
 <template>
   <div
+    v-if="visible"
     class="relative z-10"
     aria-labelledby="modal-title"
     role="dialog"
@@ -52,7 +72,10 @@ const props = defineProps({
           From: "opacity-100 translate-y-0 sm:scale-100"
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
-        <div class="sm:my-8 sm:w-full sm:max-w-sm">
+        <div
+          class="sm:my-8 sm:w-full sm:max-w-sm"
+          v-click-outside="handleClose"
+        >
           <base-card
             shadow="shadow-xl"
             :with-header="props.withHeader"
@@ -61,7 +84,7 @@ const props = defineProps({
             :bordered="false"
           >
             <template #header-action>
-              <base-icon-button>
+              <base-icon-button v-on:click="handleClose">
                 <x-mark-icon class="w-5 h-5" />
               </base-icon-button>
             </template>
