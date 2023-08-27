@@ -1,3 +1,5 @@
+import { RouterView } from 'vue-router';
+
 export const routes = [
   {
     path: '/',
@@ -8,6 +10,25 @@ export const routes = [
       title: 'app.home.title',
       requireAuth: true,
     },
+  },
+  {
+    path: '/accounts',
+    name: 'accounts',
+    component: RouterView,
+    meta: {
+      requireAuth: true,
+    },
+    children: [
+      {
+        path: '',
+        name: 'accounts.index',
+        component: () => import('src/pages/accounts/account-index-page.vue'),
+        meta: {
+          layout: 'LayoutApp',
+          title: 'app.accounts.title',
+        },
+      },
+    ],
   },
   {
     path: '/register',

@@ -4,7 +4,8 @@
     },
     "navbar": {
         "menus": {
-            "home": "Home"
+            "home": "Home",
+            "accounts": "Accounts"
         },
         "profile-dropdown-items": {
             "profile": "Profile",
@@ -52,7 +53,7 @@
         "home": {
             "title": "Home"
         },
-        "task": {
+        "accounts": {
             "placeholder": {
                 "default-category-filter": "All Todos",
                 "empty": "Empty Todos",
@@ -62,9 +63,9 @@
                 "category": "In {category}"
             },
             "actions": {
-                "mark-as-done": "Mark As Done"
+                "create": "Add Account"
             },
-            "title": "Todos"
+            "title": "Accounts"
         }
     }
 }
