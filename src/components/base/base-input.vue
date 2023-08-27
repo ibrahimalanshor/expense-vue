@@ -79,7 +79,7 @@ const style = computed(() => {
       :id="props.id"
       :class="[
         style.input,
-        'block w-full rounded-md border-0 py-1.5 pr-10 ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 relative rounded-md shadow-sm',
+        'block w-full rounded-md border-0 py-1.5 ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 relative rounded-md shadow-sm',
       ]"
       :placeholder="props.placeholder"
       v-model="value"

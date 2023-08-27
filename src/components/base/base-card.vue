@@ -10,12 +10,28 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  withFooter: {
+    type: Boolean,
+    default: false,
+  },
+  bordered: {
+    type: Boolean,
+    default: true,
+  },
+  shadow: {
+    type: String,
+    default: 'shadow-sm',
+  },
 });
 </script>
 
 <template>
   <div
-    class="divide-y divide-gray-300 bg-white relative rounded-lg border border-gray-300 bg-white shadow-sm"
+    :class="[
+      'divide-y divide-gray-300 bg-white relative rounded-lg bg-white',
+      props.bordered ? 'border border-gray-300' : '',
+      props.shadow,
+    ]"
   >
     <div
       v-if="props.withHeader"
@@ -30,6 +46,9 @@ const props = defineProps({
     </div>
     <div class="px-4 py-5 sm:px-6">
       <slot />
+    </div>
+    <div v-if="props.withFooter" class="px-4 py-5 sm:px-6">
+      <slot name="footer" />
     </div>
   </div>
 </template>
