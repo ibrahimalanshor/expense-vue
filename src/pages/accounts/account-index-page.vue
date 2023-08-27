@@ -13,10 +13,10 @@ function handleCreate() {
 </script>
 
 <template>
-  <base-card :title="translate('app.accounts.title')" with-header>
+  <base-card :title="translate('app.account.title')" with-header>
     <template #header-action>
       <base-button color="sky" v-on:click="handleCreate">{{
-        translate('app.accounts.actions.create')
+        translate('app.account.actions.create')
       }}</base-button>
     </template>
   </base-card>

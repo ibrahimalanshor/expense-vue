@@ -57,13 +57,16 @@
         "home": {
             "title": "Home"
         },
-        "accounts": {
+        "account": {
             "placeholder": {
                 "name": "Name",
                 "initial-balance": "Initial Balance"
             },
             "actions": {
                 "create": "Add Account"
+            },
+            "messages": {
+                "created": "Account created"
             },
             "title": "Accounts"
         }

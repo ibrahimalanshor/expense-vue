@@ -25,7 +25,7 @@ export const routes = [
         component: () => import('src/pages/accounts/account-index-page.vue'),
         meta: {
           layout: 'LayoutApp',
-          title: 'app.accounts.title',
+          title: 'app.account.title',
         },
       },
     ],

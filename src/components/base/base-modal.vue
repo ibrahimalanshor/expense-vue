@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, watch } from 'vue';
 import BaseCard from './base-card.vue';
 import BaseIconButton from './base-icon-button.vue';
 import { XMarkIcon } from '@heroicons/vue/24/outline';
@@ -22,7 +22,7 @@ const props = defineProps({
     default: false,
   },
 });
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue', 'visible']);
 
 const visible = computed({
   get() {
@@ -36,6 +36,12 @@ const visible = computed({
 function handleClose() {
   visible.value = false;
 }
+
+watch(visible, (value) => {
+  if (value) {
+    emit('visible');
+  }
+});
 </script>
 
 <template>
