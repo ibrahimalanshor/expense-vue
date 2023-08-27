@@ -35,6 +35,8 @@ const style = computed(() => {
   };
   const colors = {
     sky: 'bg-sky-600 text-white hover:bg-sky-500 focus-visible:outline-sky-600',
+    white:
+      'bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50',
   };
 
   return {
